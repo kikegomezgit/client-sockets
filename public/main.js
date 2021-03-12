@@ -5,5 +5,9 @@ socket.emit('create', 'room1');
 
 
 socket.on('updateCounter', data => {
-    counter.innerHTML = `<p>${data.counter} Guides created today</p>`
+    counter.innerHTML = `<p>${data} Guides created today</p>`
   });
+
+socket.on('getActualCounter', data => {
+   counter.innerHTML = `<p>${data} Guides created today</p>`
+});
